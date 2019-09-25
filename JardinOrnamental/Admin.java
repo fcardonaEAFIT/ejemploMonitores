@@ -1,8 +1,8 @@
 public class Admin implements Runnable {
 
-    private JardinOrnamental jardin;
+    private Acceso jardin;
 
-    public Admin(JardinOrnamental jardin) {
+    public Admin(Acceso jardin) {
 	this.jardin = jardin;
     }
 

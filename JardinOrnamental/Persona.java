@@ -1,7 +1,7 @@
 public class Persona implements Runnable {
-    private JardinOrnamental jardin;
+    private Acceso jardin;
 
-    public Persona(JardinOrnamental jardin) {
+    public Persona(Acceso jardin) {
 	this.jardin = jardin;
     }
 

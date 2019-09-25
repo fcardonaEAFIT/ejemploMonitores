@@ -1,4 +1,4 @@
-public class JardinOrnamental {
+public class JardinOrnamental implements Acceso {
 
     private int nPersonas;
 

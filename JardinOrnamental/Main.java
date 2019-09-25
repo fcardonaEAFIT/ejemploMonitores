@@ -1,7 +1,16 @@
 public class Main {
 
     public static void main(String []args) {
-	JardinOrnamental jardin = new JardinOrnamental();
+      
+	Acceso jardin = null;
+
+	if (args.length > 0) {
+	    jardin = new JardinOrnamentalLimitado(20); // new JardinOrnamental();
+	}
+	else {
+	    jardin = new JardinOrnamental();
+	}
+	
 	Admin admin = new Admin(jardin);
 	Thread tAdmin = new Thread(admin);
 	tAdmin.start();
