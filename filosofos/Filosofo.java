@@ -10,11 +10,11 @@ public class Filosofo implements Runnable {
     public void run() {
 	while(true) {
 	    System.out.println("Pensando");
-	    izq.tomar();
-	    der.tomar();
-	    System.out.println("Comiendo");
-	    der.dejar();
-	    izq.dejar();
+	    synchronized(izq) {
+		synchronized(der) {
+		    System.out.println("Comiendo");
+		}
+	    }
 	}
     }
 }
