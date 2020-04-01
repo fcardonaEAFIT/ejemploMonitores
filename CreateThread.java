@@ -4,7 +4,8 @@ public class CreateThread {
 
 	Runnable hilo = new Runnable() {
 		public void run() {
-		    System.out.println("Hola mundo hilo");
+		    for (int i = 0; i < 10; i++)
+			System.out.println("Hola mundo hilo");
 		}
 	    };
 
