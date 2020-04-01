@@ -14,7 +14,7 @@ public class Main {
 	Admin admin = new Admin(jardin);
 	Thread tAdmin = new Thread(admin);
 	tAdmin.start();
-	for (int i = 0; i < 100000; i++) {
+	for (int i = 0; i < 500; i++) {
 	    Persona p = new Persona(jardin);
 	    Thread t = new Thread(p);
 	    t.start();

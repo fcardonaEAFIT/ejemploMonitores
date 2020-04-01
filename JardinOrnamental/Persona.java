@@ -6,11 +6,13 @@ public class Persona implements Runnable {
     }
 
     public void run() {
-	jardin.entrar();
-	try {
-	    Thread.sleep(3);
+	while (true) {
+	    jardin.entrar();
+	    try {
+		Thread.sleep(2000);
+	    }
+	    catch (InterruptedException ie) { }
+	    jardin.salir();
 	}
-	catch (InterruptedException ie) { }
-	jardin.salir();
     }
 }
