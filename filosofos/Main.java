@@ -10,7 +10,7 @@ public class Main {
 	}
 
 	for (int i = 0; i < 5; i++) {
-	    filosofos[i] = new Filosofo(tenedores[i], tenedores[(i+1) % 5]);
+	    filosofos[i] = new Filosofo(tenedores[i], tenedores[(i+1) % 5], i);
 	    hFilosofos[i] = new Thread(filosofos[i]);
 	    hFilosofos[i].start();
 	}

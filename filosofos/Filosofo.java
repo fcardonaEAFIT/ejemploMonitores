@@ -2,9 +2,14 @@ public class Filosofo implements Runnable {
 
     private Tenedor izq;
     private Tenedor der;
-    public Filosofo(Tenedor izq, Tenedor der) {
+    private int nFilosofo;
+    private int vezComiendo;
+    
+    public Filosofo(Tenedor izq, Tenedor der, int nFilosofo) {
 	this.izq = izq;
 	this.der = der;
+	this.nFilosofo = nFilosofo;
+	this.vezComiendo = 0;
     }
 
     public void run() {
@@ -12,7 +17,10 @@ public class Filosofo implements Runnable {
 	    System.out.println("Pensando");
 	    synchronized(izq) {
 		synchronized(der) {
-		    System.out.println("Comiendo");
+		    vezComiendo++;
+		    System.out.println("Filosofo: " + nFilosofo +
+				       " comiendo por " +
+				       vezComiendo);
 		}
 	    }
 	}
